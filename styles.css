@@ -1,0 +1,1778 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:900,400,600,500,700|Quando:400");
+
+.screen textarea:focus,
+.screen input:focus {
+    outline: none;
+}
+
+.screen * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.screen div {
+    -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+    display: contents;
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+.component-wrapper * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+    pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+    visibility: hidden !important;
+}
+
+.screen a {
+    display: contents;
+    text-decoration: none;
+}
+
+.full-width-a {
+    width: 100%;
+}
+
+.full-height-a {
+    height: 100%;
+}
+
+.container-center-vertical {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    pointer-events: none;
+}
+
+.container-center-vertical>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+}
+
+.container-center-horizontal>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.auto-animated div {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated input {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+    opacity: 1;
+}
+
+.overlay-base {
+    display: none;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.overlay-base.animate-appear {
+    align-items: center;
+    animation: reveal 0.3s ease-in-out 1 normal forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+    animation: reveal 0.3s ease-in-out 1 reverse forwards;
+    display: block;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+    pointer-events: none;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-nodelay {
+    animation-delay: 0s;
+}
+
+.align-self-flex-start {
+    align-self: flex-start;
+}
+
+.align-self-flex-end {
+    align-self: flex-end;
+}
+
+.align-self-flex-center {
+    align-self: flex-center;
+}
+
+.valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.valign-text-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+input:focus {
+    outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+    pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --black-2: #000000bf;
+    --neutral100: #ffffff;
+    --neutral300: #eff0f6;
+    --neutral600: #6e6b8f;
+    --neutral800: #170f49;
+    --primary: #e34747;
+    --primarycolor-1: #4a3aff;
+    --rum: #6e6b8fbf;
+    --secondary: #4a3aff;
+    --storm-gray: #6f6c8f;
+    --text: #170f49;
+
+    --font-size-l: 20px;
+    --font-size-m: 18px;
+    --font-size-xl: 22px;
+    --font-size-xxl: 24px;
+    --font-size-xxxl: 28.2px;
+    --font-size-xxxxl: 36px;
+    --font-size-xxxxxl: 50px;
+
+    --font-family-dm_sans: "DM Sans", Helvetica;
+    --font-family-quando: "Quando", Helvetica;
+}
+
+.dmsans-normal-rum-18px {
+    color: var(--neutral600);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.dmsans-bold-royal-blue-18px {
+    color: var(--primarycolor-1);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.dmsans-bold-bunting-50px {
+    color: var(--neutral800);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-xxxxxl);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.dmsans-medium-royal-blue-24px {
+    color: var(--primarycolor-1);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.dmsans-medium-rum-24px {
+    color: var(--neutral600);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.dmsans-semi-bold-white-22px {
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.dmsans-semi-bold-black-22px {
+    color: var(--black);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.dmsans-semi-bold-salmon-pearl-22px {
+    color: var(--primary);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.dmsans-normal-rum-20px {
+    color: var(--rum);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.dmsans-normal-bunting-18px {
+    color: var(--neutral800);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.dmsans-medium-storm-gray-24px {
+    color: var(--storm-gray);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 500;
+}
+
+:root {}
+
+/* screen - homepage */
+
+.homepage {
+    align-items: flex-start;
+    background-color: var(--neutral100);
+    display: flex;
+    flex-direction: column;
+    left: 0px;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    top: 0px;
+}
+
+.homepage .header-zYNucu {
+    align-items: flex-start;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 1px;
+    position: relative;
+}
+
+.homepage .header-v2-num0gs {
+    align-items: center;
+    background-color: var(--neutral100);
+    display: flex;
+    flex: 0 0 auto;
+    gap: 536px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 31.999996185302734px 0px;
+    position: relative;
+    width: 1440px;
+}
+
+.homepage .logo-3-wtcUjD {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    position: relative;
+}
+
+.homepage .logo-3-AAkCNk {
+    background-color: transparent;
+    height: 40px;
+    position: relative;
+    width: 35px;
+}
+
+.homepage .bharathy-academy-AAkCNk {
+    width: 270px;
+}
+
+.homepage .nav-list-wtcUjD {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 31.999996185302734px;
+    justify-content: center;
+    position: relative;
+}
+
+.homepage .home-ZCf3vk {
+    background-color: transparent;
+    cursor: pointer;
+    letter-spacing: 0px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.homepage .about-ON0xzh {
+    background-color: transparent;
+    letter-spacing: 0px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.homepage .why-us-UALx7N {
+    background-color: transparent;
+    cursor: pointer;
+    letter-spacing: 0px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.homepage .primary-button-dj6o29 {
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    position: relative;
+}
+
+.homepage .master-primary-button-cRSXnp {
+    align-items: center;
+    background-color: var(--primarycolor-1);
+    border-radius: 76px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 3.9998390674591064px;
+    justify-content: center;
+    padding: 17.99927520751953px 23.999034881591797px;
+    position: relative;
+}
+
+.homepage .button-text-YsszNx {
+    color: var(--neutral100);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.homepage .frame-39260-zYNucu {
+    align-items: center;
+    align-self: stretch;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: var(--black);
+    display: flex;
+    flex: 0 0 auto;
+    gap: 188px;
+    padding: 96px 86px 92px;
+    position: relative;
+    width: 100%;
+}
+
+.homepage .frame-39265-47x4Eq {
+    background-color: #7e5959;
+    height: 720.19091796875px;
+    position: relative;
+    width: 530.1392822265625px;
+}
+
+.homepage .rectangle-4453-cCyDAi {
+    background-color: transparent;
+    height: 905px;
+    left: -86px;
+    position: absolute;
+    top: -93px;
+    width: 426px;
+}
+
+.homepage .mask-group-cCyDAi {
+    background-color: transparent;
+    height: 720px;
+    left: -86px;
+    position: absolute;
+    top: 0px;
+    width: 616px;
+}
+
+.homepage .frame-39258-47x4Eq {
+    align-items: flex-start;
+    height: 466px;
+    justify-content: center;
+    margin-right: -1.14px;
+    width: 551px;
+}
+
+.homepage .frame-38264-6xMb6t {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 24px;
+    width: 100%;
+}
+
+.homepage .education-designed-for-you-vVk8bj {
+    background-color: transparent;
+    letter-spacing: 1.8px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.homepage .cheerful-indian-asia-7onifa {
+    line-height: 62px;
+    width: 520.8856811523438px;
+}
+
+.homepage .cheerful-indian-asia-Yca3Tw {
+    align-self: stretch;
+    line-height: 30px;
+}
+
+.homepage .primary-btn-cnExxE {
+    background-color: var(--primary);
+}
+
+.homepage .button-text-TM1Xht {
+    color: var(--neutral100);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.homepage .frame-39261-zYNucu {
+    align-items: center;
+    background-color: var(--neutral100);
+    display: flex;
+    gap: 124px;
+    height: 689px;
+    margin-right: -1px;
+    padding: 100px 139px;
+    position: relative;
+    width: 1441px;
+}
+
+.homepage .group-39178-YyMfKw {
+    height: 421.1504211425781px;
+}
+
+.homepage .group-39134-ffzSEH {
+    height: 421px;
+}
+
+.homepage .rectangle-1310-0SIiJ7 {
+    height: 421px;
+}
+
+.homepage .image-0SIiJ7 {
+    background-color: transparent;
+    height: 591px;
+    left: -88px;
+    position: absolute;
+    top: -43px;
+    width: 628px;
+}
+
+.homepage .frame-39258-YyMfKw {
+    align-items: flex-start;
+    width: 550.900634765625px;
+}
+
+.homepage .frame-38264-QfTbK1 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 14px;
+}
+
+.homepage .unique-platform-for-education-lS3avX {
+    background-color: transparent;
+    letter-spacing: 1.8px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.homepage .how-is-bharathy-academy-unique-3buxq3 {
+    background-color: transparent;
+    letter-spacing: 0px;
+    line-height: 62px;
+    position: relative;
+    text-align: left;
+    width: 520.8856811523438px;
+}
+
+.homepage .we-adapt-to-each-stu-3buxq3 {
+    background-color: transparent;
+    height: 87.73966217041016px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    position: relative;
+    text-align: left;
+    width: 550.900634765625px;
+}
+
+.homepage .frame-39263-zYNucu {
+    align-items: center;
+    background-color: var(--neutral100);
+    display: flex;
+    gap: 219px;
+    height: 689px;
+    margin-right: -1px;
+    padding: 83px 140px;
+    position: relative;
+    width: 1441px;
+}
+
+.homepage .frame-39258-GNCpLk {
+    align-items: flex-start;
+    width: 541px;
+}
+
+.homepage .frame-38264-SYM6x7 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    width: 100%;
+}
+
+.homepage .register-in-one-click-URKKFx {
+    background-color: transparent;
+    letter-spacing: 1.8px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.homepage .what-is-our-one-click-solution-iU9WOr {
+    background-color: transparent;
+    letter-spacing: 0px;
+    line-height: 62px;
+    position: relative;
+    text-align: left;
+    width: 541px;
+}
+
+.homepage .we-handle-registrati-iU9WOr {
+    background-color: transparent;
+    height: 87.73966217041016px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    position: relative;
+    text-align: left;
+    width: 541px;
+}
+
+.homepage .group-39232-GNCpLk {
+    background-color: transparent;
+    height: 399.59564208984375px;
+    position: relative;
+    width: 389.8603210449219px;
+}
+
+.homepage .group-39147-bohCLL {
+    background-color: transparent;
+    height: 400px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 390px;
+}
+
+.homepage .group-39145-LX4mng {
+    background-color: transparent;
+    height: 400px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 390px;
+}
+
+.homepage .image-BLZIbM {
+    background-color: transparent;
+    height: 574px;
+    left: -87px;
+    position: absolute;
+    top: -67px;
+    width: 565px;
+}
+
+.homepage .frame-39265-zYNucu {
+    align-items: center;
+    background-color: var(--neutral100);
+    display: flex;
+    gap: 124px;
+    height: 689px;
+    margin-right: -1px;
+    padding: 100px 139px;
+    position: relative;
+    width: 1441px;
+}
+
+.homepage .group-39178-C7rsxn {
+    height: 444px;
+}
+
+.homepage .group-39134-xt96mD {
+    height: 444px;
+}
+
+.homepage .rectangle-1310-IiWRDF {
+    height: 444px;
+}
+
+.homepage .image-IiWRDF {
+    background-color: transparent;
+    height: 610px;
+    left: -79px;
+    object-fit: cover;
+    position: absolute;
+    top: -45px;
+    width: 611px;
+}
+
+.homepage .frame-39258-C7rsxn {
+    align-items: flex-start;
+    width: 550.900634765625px;
+}
+
+.homepage .frame-38264-ovfpjp {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 14px;
+    height: 323px;
+    margin-right: -0.1px;
+}
+
+.homepage .from-the-principals-pen-myj44u {
+    background-color: transparent;
+    letter-spacing: 1.8px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.homepage .meet-our-premier-xhTnui {
+    background-color: transparent;
+    letter-spacing: 0px;
+    line-height: 62px;
+    position: relative;
+    text-align: left;
+    width: 520.8856811523438px;
+}
+
+.homepage .im-janaki-i-am-the-p-xhTnui {
+    background-color: transparent;
+    height: 119px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    position: relative;
+    text-align: left;
+    width: 551px;
+}
+
+.homepage .frame-39266-ovfpjp {
+    background-color: transparent;
+    display: flex;
+    gap: 10px;
+    height: 33px;
+    overflow: hidden;
+    padding: 8px 16px;
+    width: 112px;
+}
+
+.homepage .frame-BKqvVy {
+    background-color: transparent;
+    height: 24px;
+    margin-bottom: -3.5px;
+    margin-top: -3.5px;
+    position: relative;
+    width: 24px;
+}
+
+.homepage .frame-pzbNwW {
+    background-color: transparent;
+    height: 24px;
+    margin-bottom: -3.5px;
+    margin-top: -3.5px;
+    position: relative;
+    width: 24px;
+}
+
+.homepage .frame-eXxv91 {
+    background-color: transparent;
+    height: 24px;
+    margin-bottom: -3.5px;
+    margin-right: -12px;
+    margin-top: -3.5px;
+    position: relative;
+    width: 24px;
+}
+
+.homepage .frame-39264-zYNucu {
+    align-items: center;
+    align-self: stretch;
+    background-color: var(--neutral100);
+    display: flex;
+    flex: 0 0 auto;
+    gap: 221px;
+    padding: 134px 139px;
+    position: relative;
+    width: 100%;
+}
+
+.homepage .frame-39178-0IgvJL {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+}
+
+.homepage .frame-39134-aKv8PV {
+    align-items: center;
+    background-color: var(--neutral100);
+    border: 1px solid;
+    border-color: var(--neutral300);
+    border-radius: 28.53px;
+    display: flex;
+    gap: 10px;
+    height: 421px;
+    padding: 11px;
+    position: relative;
+    width: 356px;
+}
+
+.homepage .image-0qQ7ou {
+    background-color: transparent;
+    height: 590.1640625px;
+    margin-bottom: -134.34px;
+    margin-left: -98.58px;
+    margin-right: -98.58px;
+    margin-top: -56.83px;
+    object-fit: cover;
+    position: relative;
+    width: 531.1640625px;
+}
+
+.homepage .group-39258-0IgvJL {
+    background-color: transparent;
+    height: 406.7396545410156px;
+    margin-right: -27px;
+    position: relative;
+    width: 612px;
+}
+
+.homepage .frame-38264-hFhtg0 {
+    align-items: flex-start;
+    display: flex;
+    gap: 21px;
+    left: 0px;
+    top: 0px;
+    width: 612px;
+}
+
+.homepage .dr-apj-abdul-kalam-PMivx8 {
+    background-color: transparent;
+    letter-spacing: 1.8px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.homepage .all-of-us-do-not-hav-Jn4qHI {
+    align-self: stretch;
+    background-color: transparent;
+    color: var(--neutral800);
+    font-family: var(--font-family-quando);
+    font-size: var(--font-size-xxxxl);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: normal;
+    position: relative;
+    text-align: left;
+}
+
+.homepage .talent-alone-doesnt-Jn4qHI {
+    align-self: stretch;
+    background-color: transparent;
+    height: 87.73966217041016px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    position: relative;
+    text-align: left;
+}
+
+.homepage .frame-37359-Jn4qHI {
+    gap: 24px;
+}
+
+.homepage .secondary-btn-xXsNBY {
+    align-items: flex-start;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: var(--primarycolor-1);
+    border-radius: 56px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    padding: 18px 40px;
+    position: relative;
+}
+
+.homepage .button-text-TrO0V9 {
+    color: var(--primarycolor-1);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.homepage .frame-39266-zYNucu {
+    background-color: var(--neutral100);
+    display: flex;
+    gap: 124px;
+    height: 517px;
+    justify-content: center;
+    margin-right: -1px;
+    padding: 100px 139px;
+    width: 1441px;
+}
+
+.homepage .frame-39258-JxV6Ei {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -20px;
+    margin-top: -20px;
+    width: 550.900634765625px;
+}
+
+.homepage .frame-38264-OTn70F {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 34px;
+    margin-left: -32.55px;
+    margin-right: -32.55px;
+}
+
+.homepage .title-RxqyTR {
+    background-color: transparent;
+    color: var(--neutral800);
+    font-family: var(--font-family-dm_sans);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0px;
+    line-height: 62px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 551px;
+}
+
+.homepage .frame-39519-RxqyTR {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 0px 0px 0px 65px;
+    position: relative;
+}
+
+.homepage .personalized-learnin-XXbQ7b {
+    background-color: transparent;
+    color: transparent;
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 500;
+    height: 155px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+    width: 551px;
+}
+
+.homepage .span0-UxAi7S {
+    font-style: normal;
+}
+
+.homepage .span1-UxAi7S {
+    font-style: normal;
+}
+
+.homepage .span2-UxAi7S {
+    font-style: normal;
+}
+
+.homepage .span3-UxAi7S {
+    font-style: normal;
+}
+
+.homepage .span4-UxAi7S {
+    font-style: normal;
+}
+
+.homepage .span5-UxAi7S {
+    font-style: normal;
+}
+
+.homepage .span6-UxAi7S {
+    font-style: normal;
+}
+
+.homepage .span7-UxAi7S {
+    font-style: normal;
+}
+
+.homepage .frame-39266-RxqyTR {
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    overflow: hidden;
+    padding: 8px 16px;
+}
+
+.homepage .primary-btn-7NDZgd {
+    background-color: var(--primarycolor-1);
+}
+
+.homepage .button-text-NoPY2L {
+    color: var(--neutral100);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.homepage .frame-39267-zYNucu {
+    align-items: center;
+    background-color: var(--neutral100);
+    display: flex;
+    gap: 120px;
+    height: 999px;
+    margin-right: -1px;
+    padding: 83px 140px;
+    position: relative;
+    width: 1441px;
+}
+
+.homepage .frame-39258-JL9YlW {
+    align-items: flex-start;
+    width: 541px;
+}
+
+.homepage .frame-38264-93hsyc {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    width: 100%;
+}
+
+.homepage .contact-us-YCXodY {
+    background-color: transparent;
+    letter-spacing: 1.8px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.homepage .were-here-to-help-you-succeed-xk1MKn {
+    background-color: transparent;
+    letter-spacing: 0px;
+    line-height: 62px;
+    position: relative;
+    text-align: left;
+    width: 541px;
+}
+
+.homepage .have-questions-or-ne-xk1MKn {
+    background-color: transparent;
+    color: var(--neutral600);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 400;
+    height: 63px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    position: relative;
+    text-align: left;
+    width: 541px;
+}
+
+.homepage .frame-39520-93hsyc {
+    align-items: flex-start;
+    align-self: stretch;
+    background-color: transparent;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    padding: 16px;
+    position: relative;
+    width: 100%;
+}
+
+.homepage .frame-39521-67azGp {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+    width: 413px;
+}
+
+.homepage .name-zLP9CV {
+    align-self: stretch;
+    background-color: transparent;
+    letter-spacing: 0.55px;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+}
+
+.homepage .span0-M9eViJ {
+    letter-spacing: 0.12px;
+}
+
+.homepage .span1-M9eViJ {
+    letter-spacing: 0.12px;
+}
+
+.homepage .frame-39522-zLP9CV {
+    align-self: stretch;
+    background-color: transparent;
+    border: 0.5px solid;
+    border-color: var(--black-2);
+    height: 57px;
+    position: relative;
+    width: 100%;
+}
+
+.homepage .jane-smith-VFd5ag {
+    background-color: transparent;
+    height: auto;
+    left: 20px;
+    letter-spacing: 0px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 16px;
+    width: auto;
+}
+
+.homepage .frame-39522-67azGp {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+    width: 413px;
+}
+
+.homepage .email-XBcjuv {
+    align-self: stretch;
+    background-color: transparent;
+    letter-spacing: 0.55px;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+}
+
+.homepage .span0-NkdZ89 {
+    letter-spacing: 0.12px;
+}
+
+.homepage .span1-NkdZ89 {
+    letter-spacing: 0.12px;
+}
+
+.homepage .frame-39522-XBcjuv {
+    align-self: stretch;
+    background-color: transparent;
+    border: 0.5px solid;
+    border-color: var(--black-2);
+    height: 57px;
+    position: relative;
+    width: 100%;
+}
+
+.homepage .nameexamplecom-hwPK7X {
+    background-color: transparent;
+    height: auto;
+    left: 20px;
+    letter-spacing: 0px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 16px;
+    width: auto;
+}
+
+.homepage .frame-39523-67azGp {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+    width: 413px;
+}
+
+.homepage .phone-number-ThTMvU {
+    align-self: stretch;
+    background-color: transparent;
+    letter-spacing: 0.55px;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+}
+
+.homepage .span0-81JDsq {
+    letter-spacing: 0.12px;
+}
+
+.homepage .span1-81JDsq {
+    letter-spacing: 0.12px;
+}
+
+.homepage .frame-39522-ThTMvU {
+    align-self: stretch;
+    background-color: transparent;
+    border: 0.5px solid;
+    border-color: var(--black-2);
+    height: 57px;
+    position: relative;
+    width: 100%;
+}
+
+.homepage .x0-000-000-0000-UEPmIw {
+    background-color: transparent;
+    height: auto;
+    left: 20px;
+    letter-spacing: 0px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 16px;
+    width: auto;
+}
+
+.homepage .frame-39524-67azGp {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+    width: 413px;
+}
+
+.homepage .message-na06Kk {
+    align-self: stretch;
+    background-color: transparent;
+    letter-spacing: 0.55px;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+}
+
+.homepage .span0-7eYxs4 {
+    letter-spacing: 0.12px;
+}
+
+.homepage .span1-7eYxs4 {
+    letter-spacing: 0.12px;
+}
+
+.homepage .frame-39522-na06Kk {
+    align-self: stretch;
+    background-color: transparent;
+    border: 0.5px solid;
+    border-color: var(--black-2);
+    height: 160px;
+    position: relative;
+    width: 100%;
+}
+
+.homepage .type-your-thoughts-here-Z7l9Ew {
+    background-color: transparent;
+    height: auto;
+    left: 20px;
+    letter-spacing: 0px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 16px;
+    width: auto;
+}
+
+.homepage .frame-39525-67azGp {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    position: relative;
+    width: 413px;
+}
+
+.homepage .frame-39522-6bF2Vt {
+    align-items: center;
+    align-self: stretch;
+    background-color: var(--primarycolor-1);
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    justify-content: center;
+    padding: 0px 123px;
+    position: relative;
+    width: 100%;
+}
+
+.homepage .submit-uFRxU1 {
+    background-color: transparent;
+    color: var(--neutral100);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0px;
+    line-height: normal;
+    position: relative;
+    text-align: left;
+    width: fit-content;
+}
+
+.homepage .frame-39526-JL9YlW {
+    background-color: #f5f5f5;
+    height: 779px;
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+}
+
+.homepage .frame-39527-nXLKbz {
+    background-color: transparent;
+    height: 395px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 500px;
+}
+
+.homepage .map-maker-choolaimed-4rhemf {
+    background-color: transparent;
+    height: 500px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 500px;
+}
+
+.homepage .frame-39528-nXLKbz {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    height: 278px;
+    left: 0px;
+    overflow: hidden;
+    padding: 35px 42px 42px;
+    position: absolute;
+    top: 500px;
+    width: 500px;
+}
+
+.homepage .frame-39529-Fiox6I {
+    background-color: transparent;
+    height: 106px;
+    position: relative;
+    width: 227px;
+}
+
+.homepage .getting-in-touch-yKC8ZF {
+    background-color: transparent;
+    color: var(--black);
+    font-family: var(--font-family-dm_sans);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: -1px;
+    width: auto;
+}
+
+.homepage .frame-39532-yKC8ZF {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 9px;
+    position: absolute;
+    top: 50px;
+    width: 209px;
+}
+
+.homepage .frame-39531-3L6N6w {
+    align-self: stretch;
+    background-color: transparent;
+    height: 25.43825912475586px;
+    position: relative;
+    width: 100%;
+}
+
+.homepage .frame-QqNjqX {
+    background-color: transparent;
+    height: 25px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 25px;
+}
+
+.homepage .x91-9710512667-QqNjqX {
+    left: 42px;
+    top: 0px;
+}
+
+.homepage .frame-39532-3L6N6w {
+    align-self: stretch;
+    background-color: transparent;
+    height: 25.43825912475586px;
+    position: relative;
+    width: 100%;
+}
+
+.homepage .frame-JkOxKp {
+    background-color: transparent;
+    height: 20px;
+    left: 0px;
+    position: absolute;
+    top: 3px;
+    width: 30px;
+}
+
+.homepage .x91-9710512667-JkOxKp {
+    left: 42px;
+    top: 0px;
+}
+
+.homepage .frame-39530-Fiox6I {
+    align-items: flex-start;
+    align-self: stretch;
+    background-color: transparent;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: -4.44px;
+    position: relative;
+    width: 100%;
+}
+
+.homepage .location-9W7Epw {
+    background-color: transparent;
+    color: var(--black);
+    font-family: var(--font-family-dm_sans);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0px;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: left;
+    width: fit-content;
+}
+
+.homepage .frame-39533-9W7Epw {
+    align-items: flex-start;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 0px 0px 10px;
+    position: relative;
+}
+
+.homepage .frame-39532-ZIf7CA {
+    background-color: transparent;
+    height: 25.43825912475586px;
+    position: relative;
+    width: 209px;
+}
+
+.homepage .frame-YEcjpd {
+    background-color: transparent;
+    height: 25px;
+    left: 5px;
+    position: absolute;
+    top: 0px;
+    width: 25px;
+}
+
+.homepage .x91-9710512667-YEcjpd {
+    left: 36px;
+    top: -1px;
+}
+
+.homepage .footer-v3-zYNucu {
+    align-items: center;
+    background-color: var(--neutral100);
+    display: inline-flex;
+    flex-direction: column;
+    height: 158px;
+    overflow: hidden;
+    padding: 0px 0px 60px;
+    position: relative;
+}
+
+.homepage .footer-auto-layout-CSHeom {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: -2px;
+    position: relative;
+    width: 1440px;
+}
+
+.homepage .divider-amRJfl {
+    background-color: transparent;
+    height: 1px;
+    object-fit: cover;
+    position: relative;
+    width: 1440px;
+}
+
+.homepage .footer-bottom-amRJfl {
+    background-color: transparent;
+    height: 40px;
+    position: relative;
+    width: 1196.63037109375px;
+}
+
+.homepage .copyright-yGb2By {
+    background-color: transparent;
+    height: auto;
+    left: 759px;
+    letter-spacing: 0px;
+    line-height: 20px;
+    position: absolute;
+    text-align: right;
+    top: 2px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.homepage .span0-arqypv {}
+
+.homepage .span1-arqypv {
+    color: var(--neutral600);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.homepage .span2-arqypv {}
+
+.homepage .logo-3-yGb2By {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    gap: 16px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+}
+
+.homepage .logo-3-aasRJo {
+    background-color: transparent;
+    height: 40px;
+    position: relative;
+    width: 35px;
+}
+
+.homepage .bharathy-academy-aasRJo {
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.homepage .bharathy-academy {
+    background-color: transparent;
+    color: var(--neutral800);
+    font-family: var(--font-family-dm_sans);
+    font-size: var(--font-size-xxxl);
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 29.7px;
+    position: relative;
+    text-align: left;
+}
+
+.homepage .button-text {
+    background-color: transparent;
+    font-family: var(--font-family-dm_sans);
+    font-style: normal;
+    letter-spacing: 0px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.homepage .cheerful-indian-asia {
+    background-color: transparent;
+    letter-spacing: 0px;
+    position: relative;
+    text-align: left;
+}
+
+.homepage .frame-37359 {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    position: relative;
+}
+
+.homepage .frame-38264 {
+    background-color: transparent;
+    flex-direction: column;
+    position: relative;
+}
+
+.homepage .frame-39258 {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.homepage .frame-39266 {
+    align-items: center;
+    position: relative;
+}
+
+.homepage .group-39134 {
+    background-color: transparent;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 453px;
+}
+
+.homepage .group-39178 {
+    background-color: transparent;
+    position: relative;
+    width: 453px;
+}
+
+.homepage .link {
+    align-items: flex-start;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.homepage .master-link {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 6px;
+    position: relative;
+}
+
+.homepage .primary-btn {
+    align-items: flex-start;
+    border-radius: 100px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    padding: 18px 40px;
+    position: relative;
+}
+
+.homepage .rectangle-1310 {
+    background-color: var(--neutral100);
+    border: 1px solid;
+    border-color: var(--neutral300);
+    border-radius: 28.53px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 453px;
+}
+
+.homepage .rectangle-415 {
+    background-color: var(--primarycolor-1);
+    border-radius: 30px;
+    height: 2px;
+    position: relative;
+    width: 22px;
+}
+
+.homepage .subtitle {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+}
+
+.homepage .x91-9710512667 {
+    background-color: transparent;
+    height: 22px;
+    letter-spacing: 0px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    white-space: nowrap;
+    width: 177px;
+}
